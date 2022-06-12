@@ -1,0 +1,11 @@
+<div>
+    <?= $magewire->getStepHtml(); ?>
+    <div class="flex">
+        <?php if ($magewire->getActiveStep() > 0): ?>
+            <button class="btn btn-primary" wire:click="prevStep">Prev</button>
+        <?php endif; ?>
+        <?php if ($magewire->getActiveStep() < $magewire->getStepAmount()): ?>
+        <button class="btn btn-primary" wire:click="nextStep">Next</button>
+        <?php endif; ?>
+    </div>
+</div>
